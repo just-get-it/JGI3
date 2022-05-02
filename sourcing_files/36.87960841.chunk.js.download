@@ -1,1 +1,3 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[36],{Wkzb:function(e,t,n){},qfyu:function(e,t,n){"use strict";n.r(t);var s=n("ERkP"),a=n.n(s),c=n("9Xg1");n("Wkzb");t.default=function BotMessage(e){return a.a.createElement(c.default,Object.assign({},e,{className:"drift-widget-message--bot"}))}}}]);
+version https://git-lfs.github.com/spec/v1
+oid sha256:edf5d541caca5cdba1417802ad63b784c665a0a9a4186f1a1ac4e43e1a24439f
+size 303

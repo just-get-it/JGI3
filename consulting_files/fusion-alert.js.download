@@ -1,1 +1,3 @@
-jQuery(document).on("ready fusion-element-render-fusion_alert",function(e,n){(void 0!==n?jQuery('div[data-cid="'+n+'"]').find(".fusion-alert .close"):jQuery(".fusion-alert .close")).click(function(e){e.preventDefault(),jQuery(this).parent().slideUp()})});
+version https://git-lfs.github.com/spec/v1
+oid sha256:cae9d59a10b9f1b90460a886ad511e82e195e84f6e16aff8bc100672ee3f99ed
+size 255

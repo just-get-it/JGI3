@@ -1,1 +1,3 @@
-!function(){/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var a,b=location.hash.substring(1);/^[A-z0-9_-]+$/.test(b)&&(a=document.getElementById(b))&&(/^(?:a|select|input|button|textarea)$/i.test(a.tagName)||(a.tabIndex=-1),a.focus())},!1)}();
+version https://git-lfs.github.com/spec/v1
+oid sha256:ba3c591c841f6937122e46742b03b77527d9a086525f96ef64a5ee952f42d28d
+size 340

@@ -1,1 +1,3 @@
-jQuery(window).load(function(){(cssua.ua.mobile||cssua.ua.tablet_pc)&&jQuery(".fusion-popover, .fusion-tooltip").each(function(){jQuery(this).attr("data-trigger","click"),jQuery(this).data("trigger","click")}),jQuery('[data-toggle~="popover"]').popover({container:"body"})}),jQuery(window).on("fusion-element-render-fusion_text fusion-element-render-fusion_popover",function(o,e){jQuery('div[data-cid="'+e+'"]').find('[data-toggle~="popover"]').popover({container:"body"})});
+version https://git-lfs.github.com/spec/v1
+oid sha256:f0aeeddea2ff4bf7047e8068573303ac90d47bc1476870b215ae19cb9748f929
+size 475

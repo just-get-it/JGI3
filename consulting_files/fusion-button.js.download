@@ -1,1 +1,3 @@
-jQuery(window).load(function(){cssua.ua.ios&&7===parseInt(cssua.ua.ios,10)&&jQuery(".button-icon-divider-left, .button-icon-divider-right").each(function(){var i=jQuery(this).parent().outerHeight();jQuery(this).css("height",i)})});
+version https://git-lfs.github.com/spec/v1
+oid sha256:d882bbd73aa836e0c9ce3c8105f0247585503ccdf6ea00bb3ac641b149e183f7
+size 231

@@ -1,1 +1,3 @@
-jQuery(document).ready(function(){var a="function"==typeof getAdminbarHeight?getAdminbarHeight():0,b="function"==typeof getStickyHeaderHeight?getStickyHeaderHeight():0;jQuery("body").scrollspy({target:".fusion-menu",offset:parseInt(a+b+1,10)}),jQuery(window).load(function(){a="function"==typeof getAdminbarHeight?getAdminbarHeight():0,b="function"==typeof getStickyHeaderHeight?getStickyHeaderHeight():0,jQuery("body").data()["bs.scrollspy"].options.offset=parseInt(a+b+1,10)})});
+version https://git-lfs.github.com/spec/v1
+oid sha256:312c164cb73133f2aef50f88906924ab050188ad211e8d82ee95e34a1f0dcf04
+size 481
