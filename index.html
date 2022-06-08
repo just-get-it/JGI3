@@ -9090,7 +9090,7 @@ Engineering
                     <img style="border-radius: 30px;" data-animate="fadeInLeftBig" src="public/home/fashion.jpg"
                         height="200" alt="consultancy">
                 </div>
-            
+
             </div>
 
         </section>
@@ -9242,18 +9242,11 @@ Engineering
                     </div>
                     <div class="col_three_fifth topmargin-sm bottommargin-lg col_last">
                         <div>
-                            <h3 id="new_con">The collaborative platform for professionals<br> the fashion and textile
-                                sector<br></h3>
-                            <h4 id="new_con">Justgetit is the ideal tool to find <br>partners who can adapt to your
-                                project's needs.</h4>
+                            <h3 id="new_con">The collaborative platform for professionals of the fashion and textile sector<br></h3>
+                            <h4 id="new_con">Connect is the ideal platform to find partners who can adapt to your project's needs.</h4>
 
-                            <h5 id="new_con">We simplify global trade by providing businesses with a platform to
-                                connect, trade and build more efficient supply chains.</h5>
-                            <h6>We facilitates all stakeholders of Retail, Fashion and Manufacturing industry to have a
-                                common professional networking for their all requirements dynamically to interact and
-                                resolve their requirements across full supply chain to save time, efforts and money and
-                                connects especially apparel buyers, suppliers and manufacturers digitally and helps them
-                                build trusted relationships with simple information sharing.
+                            <h5 id="new_con">We simplify global trade by providing businesses with a platform to connect, trade and build more efficient supply chains.</h5>
+                            <h6>We facilitates all stakeholders of Retail, Fashion and Manufacturing industry to have a common professional networking for their all requirements dynamically to interact and resolve their requirements across full supply chain to save time, efforts and money and connects especially apparel buyers, suppliers and manufacturers digitally and helps them build trusted relationships with simple information sharing.
                             </h6>
 
                         </div><br><a id="link-78-66" class="ct-link c-link-m c-transition" href="/connect/"
@@ -9284,8 +9277,70 @@ Engineering
             <h3>Networking! Consulting!</h3>
             <div id="owl-demo13" class="owl-carousel owl-theme">
 
-            </div> <!--  -->
+            </div>
         </div>
+
+        <script>
+            console.log("Inside consult")
+            let crousel=document.getElementById("owl-demo13");
+            console.log(crousel);
+            const consult_cards = [{
+                title: "Network",
+                desc: "Connect and trade with thousands of buyers and suppliers in our global network for the apparel industry.",
+                img: "/public/Connect/Networking.jpg"
+            },
+            {
+                title: "Visibility",
+                desc: "Visualise, understand and protect your supply chain Get a holistic view of your supply chain, with visualisations, alerts and insights that help protect your business",
+                img: "/public/Connect/Visibility.jpg"
+            },
+            {
+                title: "Traceability",
+                desc: "Collect and analyse product information from upstream suppliers to understand the origins of your raw materials and share proof with the stakeholders that matter.",
+                img: "/public/Connect/Traceability.png"
+            },
+            {
+                title: "Transparency",
+                desc: "We simplify global trade by providing businesses with a platform to connect, trade and build more efficient supply chains.",
+                img: "/public/Connect/Transparancy.jpg"
+            },
+            {
+                title: "Experts",
+                desc: "Connect & Consult with Industry Experts free and avail their services at the nominal charges",
+                img: "/public/Connect/Experts.jpg"
+            },
+            ]
+            let getCard = (title, desc, img) => {
+                return `
+              
+                    <div class="new-category center padded">
+                        <div class="card-with-img">
+                            <a href="#">
+                                <img src="${img}" alt="card">
+                            </a>
+                            <h4>${title}</h4>
+                            <p>${desc}</p>
+
+                        </div>
+                    </div>
+             
+                `
+            }
+
+            consult_cards.forEach((card)=> {
+                    // console.log(consult_cards[card]);
+                    const title = card.title;
+                    const desc = card.desc;
+                    const img = card.img;
+
+                    let html_card=getCard(title,desc,img);
+
+                    crousel.innerHTML+=html_card;
+
+
+                
+            } )
+        </script>
 
         <script>
             $(document).ready(function () {
@@ -9303,7 +9358,7 @@ Engineering
                     responsive: {
                         0: {
                             items: 1,
-
+                            loop: true
 
                         },
                         600: {
