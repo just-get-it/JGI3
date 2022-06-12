@@ -9328,16 +9328,18 @@ Engineering
                     let getCard = (title, desc, img) => {
                         return `
               
-                    <div class="new-category center padded">
-                        <div class="card-with-img">
-                            <a href="#">
-                                <img src="${img}" alt="card">
-                            </a>
-                            <h4>${title}</h4>
-                            <p>${desc}</p>
+<div class="new-category center padded">
+        <div class="card-with-img" style="height: 30rem; width: 100%">
+            <a href="#">
+                <img class="card-img-top" src="${img}" alt="card">
+            </a>
+            <div class="p-3">
+            <h4>${title}</h4>
+            <p>${desc}</p>
 
-                        </div>
-                    </div>
+        </div>
+        </div>
+    </div>
              
                 `
                     }
@@ -9773,13 +9775,15 @@ height="250" alt="consultancy">
                 return `
 
     <div class="new-category center padded">
-        <div class="card-with-img">
+        <div class="card-with-img" style="height: 32rem; width: 100%">
             <a href="#">
-                <img src="${img}" alt="card">
+                <img class="card-img-top" src="${img}" alt="card">
             </a>
+            <div class="p-3">
             <h4>${title}</h4>
             <p>${desc}</p>
 
+        </div>
         </div>
     </div>
 
