@@ -7898,7 +7898,7 @@ Engineering
     <head>
         <style>
             .text-shadow-black .item {
-                box-shadow: 10px 10px rgba(0, 0, 0, 0.7);
+                /* box-shadow: 10px 10px rgba(0, 0, 0, 0.7); */
                 color: #fff;
             }
 
@@ -7907,9 +7907,27 @@ Engineering
         } */
             .text-shadow-black h3,
             .text-shadow-black h3 {
-                text-shadow: black 0px 0px 10px;
+                text-shadow: goldenrod 0px 0px 10px;
+            }
+
+            .owl-dots {
+
+                max-width: 130px;
+                width: max-content;
+                overflow: auto;
+                display: flex;
+                float: calc();
+                position: relative;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+            .owl-dots::-webkit-scrollbar {
+                display: none;
+                /* Safari and Chrome */
             }
         </style>
+
+
     </head>
 
 
@@ -9211,7 +9229,7 @@ Engineering
                             responsive: {
                                 0: {
                                     items: 1,
-                                    dots:false,
+
                                     loop: true
                                 },
                                 600: {
@@ -9239,6 +9257,8 @@ Engineering
 
 
             </section>
+
+
 
             <section id="connect-content">
 
@@ -9294,43 +9314,40 @@ Engineering
 
                     </div>
                 </div>
+            </section>
 
-                <style>
-                  
-                </style>
-
-                <script>
-                    console.log("Inside consult")
-                    let crousel = document.getElementById("owl-demo13");
-                    console.log(crousel);
-                    const consult_cards = [{
-                        title: "Network",
-                        desc: "Connect and trade with thousands of buyers and suppliers in our global network for the apparel industry.",
-                        img: "/public/Connect/Networking.jpg"
-                    },
-                    {
-                        title: "Visibility",
-                        desc: "Visualise, understand and protect your supply chain Get a holistic view of your supply chain, with visualisations, alerts and insights that help protect your business",
-                        img: "/public/Connect/Visibility.jpg"
-                    },
-                    {
-                        title: "Traceability",
-                        desc: "Collect and analyse product information from upstream suppliers to understand the origins of your raw materials and share proof with the stakeholders that matter.",
-                        img: "/public/Connect/Traceability.png"
-                    },
-                    {
-                        title: "Transparency",
-                        desc: "We simplify global trade by providing businesses with a platform to connect, trade and build more efficient supply chains.",
-                        img: "/public/Connect/Transparancy.jpg"
-                    },
-                    {
-                        title: "Experts",
-                        desc: "Connect & Consult with Industry Experts free and avail their services at the nominal charges",
-                        img: "/public/Connect/Experts.jpg"
-                    },
-                    ]
-                    let getCard = (title, desc, img) => {
-                        return `
+            <script>
+                console.log("Inside consult")
+                let crousel = document.getElementById("owl-demo13");
+                console.log(crousel);
+                const consult_cards = [{
+                    title: "Network",
+                    desc: "Connect and trade with thousands of buyers and suppliers in our global network for the apparel industry.",
+                    img: "/public/Connect/Networking.jpg"
+                },
+                {
+                    title: "Visibility",
+                    desc: "Visualise, understand and protect your supply chain Get a holistic view of your supply chain, with visualisations, alerts and insights that help protect your business",
+                    img: "/public/Connect/Visibility.jpg"
+                },
+                {
+                    title: "Traceability",
+                    desc: "Collect and analyse product information from upstream suppliers to understand the origins of your raw materials and share proof with the stakeholders that matter.",
+                    img: "/public/Connect/Traceability.png"
+                },
+                {
+                    title: "Transparency",
+                    desc: "We simplify global trade by providing businesses with a platform to connect, trade and build more efficient supply chains.",
+                    img: "/public/Connect/Transparancy.jpg"
+                },
+                {
+                    title: "Experts",
+                    desc: "Connect & Consult with Industry Experts free and avail their services at the nominal charges",
+                    img: "/public/Connect/Experts.jpg"
+                },
+                ]
+                let getCard = (title, desc, img) => {
+                    return `
               
 <div class="new-category center padded">
         <div class="card-with-img" style="height: 30rem; width: 100%">
@@ -9346,332 +9363,327 @@ Engineering
     </div>
              
                 `
-                    }
+                }
 
-                    consult_cards.forEach((card) => {
-                        // console.log(consult_cards[card]);
-                        const title = card.title;
-                        const desc = card.desc;
-                        const img = card.img;
+                consult_cards.forEach((card) => {
+                    // console.log(consult_cards[card]);
+                    const title = card.title;
+                    const desc = card.desc;
+                    const img = card.img;
 
-                        let html_card = getCard(title, desc, img);
+                    let html_card = getCard(title, desc, img);
 
-                        crousel.innerHTML += html_card;
-
-
-
-                    })
-                </script>
-
-                <script>
-                    $(document).ready(function () {
-
-                        $("#owl-demo13").owlCarousel({
-
-
-                            // stagePadding:30,
-                            // smartSpeed:450,
-                            autoplay: true,
-
-                            loop: true,
-                            margin: 10,
-                            responsiveClass: true,
-                            responsive: {
-                                0: {
-                                    items: 1,
-                                    loop: true,
-                                    dots:false
-                                },
-                                600: {
-                                    items: 4,
-
-                                    loop: true
-
-                                },
-
-                            }
+                    crousel.innerHTML += html_card;
 
 
 
-                            // "singleItem:true" is a shortcut for:
-                            // items : 1, 
-                            // itemsDesktop : false,
-                            // itemsDesktopSmall : false,
-                            // itemsTablet: false,
-                            // itemsMobile : false
+                })
+            </script>
 
-                        });
+            <script>
+                $(document).ready(function () {
+
+                    $("#owl-demo13").owlCarousel({
+
+
+                        // stagePadding:30,
+                        // smartSpeed:450,
+                        autoplay: true,
+
+                        loop: true,
+                        margin: 10,
+                        pagination: 5,
+                        responsiveClass: true,
+                        responsive: {
+                            0: {
+                                items: 1,
+                                loop: true,
+                            },
+                            600: {
+                                items: 4,
+
+                                loop: true
+
+                            },
+
+                        }
+
+
+
+                        // "singleItem:true" is a shortcut for:
+                        // items : 1, 
+                        // itemsDesktop : false,
+                        // itemsDesktopSmall : false,
+                        // itemsTablet: false,
+                        // itemsMobile : false
 
                     });
 
-                </script>
+                });
+
+            </script>
 
 
-            </section>
+            <script>
+                console.log("inside body builder");
 
-
-        </div>
-
-        <script>
-            console.log("inside body builder");
-
-            const body_cards_object = [
-                {
-                    title: "Consult",
-                    id: "consult_1",
-                    link: "/consulting.html",
-                    img: "/public/home/we-consult.jpg",
-                    tagline: "Optimise! Efficient! Profitable! Sustainable!",
-                    h3: "Every business needs a trusted consultant",
-                    h4: "We make your business bigger, faster, smarter, global and cost-effective, so that you can grow to the next level.",
-                    h5: "Our promise to you is simple, we will help you capture relevant business opportunities and we will ensure that you do so profitably sustainable and within a reasonable timeframe. We exist because of you and at JGI, our client’s interest stands above everything. We stand committed, by your side, as your trusted consultant. ",
-                    h6: "We are into fashion, design and management with experts having years of deep experience in working with organizations across apparel manufacturing, consulting, product development and sourcing. ",
-                    p1: "",
-                    p2: "",
-                    cards: [{
-                        title: "Sourcing",
-                        desc: "Frustrated with manufacturers? Just Get It offers you its own world class manufacturing setup best in industry! You can take a break or concentrate only on branding and marketing while we manage everything from design to delivery!",
-                        img: "/public/consult/sourcing.jpg"
-                    },
+                const body_cards_object = [
                     {
-                        title: "Designing",
-                        desc: "We don't develop product! We design experience that engage, entertain and inspire!",
-                        img: "/public/consult/designing.jpg"
-                    },
-                    {
-                        title: "Product Development",
-                        desc: "We don't develop product! We design experience that engage, entertain and inspire!",
-                        img: "/public/consult/product_development.png"
-                    },
-                    {
-                        title: "Manufacturing",
-                        desc: "Micro Factory - World class Manufacturing!",
-                        img: "/public/consult/manufacturing.jpg"
-                    },
-                    {
-                        title: "Automation",
-                        desc: "All informations at your finger tip! Networking, Transparency, Traceability & Visibility!",
-                        img: "/public/consult/automation.png"
-                    },
-                    {
-                        title: "Branding",
-                        desc: "We help brands connect with the world through digital experiences that engage, entertain, and inspire.",
-                        img: "/public/consult/branding.png"
-                    },
-                    {
-                        title: "Marketplace",
-                        desc: "Introducing hundreds of new styles across multiple categories",
-                        img: "/public/consult/marketplace.jpg"
-                    },
-                    {
-                        title: "Auto Pro",
-                        desc: "Automated tools to smoothen the processs of fashion supply chain across all categories of fashion products",
-                        img: "/public/consult/auto-pro.png"
-                    },
-                    ]
-                },
-                {
-                    title: "Digitize",
-                    id: "digitize_2",
-                    link: "/consulting.html",
-                    img: "/public/home/digitise.png",
-                    tagline: "Simplified! Digitised! Faster! Smarter!",
-                    h3: "Solutions to Supply Chain stakeholders",
-                    h4: "Optimise all KPIs - Consumption, Cost, MOQ, Lead Time, Quality, Efficiency, Suply Chain, ROI, Turnover",
-                    h5: "As a developer/owner you are always chasing your suppliers and your consultant to give you an update on the projects especially for delays and critical issues. AutoPRO with its online Dashboards directly connected to the schedule, the operations and the approval documents gives you instant access to this data.",
-                    h6: "Various Supply Chain, Product Development, Manufacturing, PLM and ERP software products to solve the industry issues have been developed and research keep going on to improvise these further",
-                    p1: "",
-                    p2: "",
-                    cards: [{
-                        title: "Product Development",
-                        desc: "Automated tools to smoothen the processs of fashion supply chain across all categories of fashion products",
-                        img: "/public/digitize/product_development.png"
-                    },
-                    {
-                        title: "Branding",
-                        desc: "SEO & digital media Auto posting tools to do branding & marketing",
-                        img: "/public/digitize/Branding-Digital Marketing.jpg"
-                    },
-                    {
-                        title: "2D Design",
-                        desc: "Auto design 2D graphics",
-                        img: "/public/digitize/2D design.jpg"
-                    },
-                    {
-                        title: "3D Design",
-                        desc: "Auto Design 3D Graphics/Animation/Videos",
-                        img: "/public/digitize/3D Design.webp"
-                    },
-                    {
-                        title: "Personalise",
-                        desc: "Personalise your products",
-                        img: "/public/digitize/Personalise.png"
-                    },
-                    {
-                        title: "Customise",
-                        desc: "Customise your products",
-                        img: "/public/digitize/Customise.jpg"
-                    },
-                    {
-                        title: "Visualise-3D",
-                        desc: "Visualise your products using virtual trial room and selfie",
-                        img: "/public/digitize/Visualise VR 3D.png"
-                    },
-                    {
-                        title: "Enquiry",
-                        desc: "Enquiry form to get required details automatically",
-                        img: "/public/digitize/Enquiry.jpg"
-                    },
-                    {
-                        title: "Designing",
-                        desc: "Automated tools to smoothen the processs of fashion supply chain across all categories of fashion products",
-                        img: "/public/digitize/Product Development.jpg"
-                    },
-                    {
-                        title: "Sampling",
-                        desc: "Sampling form to get required details automatically",
-                        img: "/public/digitize/SMED Changeover.png"
-                    },
-                    {
-                        title: "Ordering",
-                        desc: "Ordering form to get required details automatically",
-                        img: "/public/digitize/Warehouse.jpg"
-                    },
-                    {
-                        title: " Measurement chart",
-                        desc: "Create your own measurement chart based on ethnicity and body type",
-                        img: "/public/digitize/Measurement Chart.jpg"
-                    },
-                    {
-                        title: "Size&Fit",
-                        desc: "Compare and choose best size and fit as per your own body type/measurements/old style details",
-                        img: "/public/digitize/size and fit.jpg"
-                    },
-                    {
-                        "title": "Techpack",
-                        "desc": "Design your styles techpack automatically",
-                        "img": "/public/digitize/Techpack.jpg"
-                    },
-                    {
-                        "title": "3D Simulation (Product and  collection, fashion show)",
-                        "desc": "visualise your products digitally in 3D simulation view by selecting model, shape, size, background, etc.",
-                        "img": "/public/digitize/3d simulation.jpg"
-                    },
-                    {
-                        "title": "Consumption",
-                        "desc": "Calculate and estimate consumption based on the order quantity and size ratio",
-                        "img": "/public/digitize/Consumption.jpg"
-                    },
-                    {
-                        "title": "Lead Time",
-                        "desc": "Calculate and estimate Leadtime based on product and order quanity",
-                        "img": "/public/digitize/Leadtime.png"
-                    },
-                    {
-                        "title": "Merchandising",
-                        "desc": "Automising merchandising and supply chain",
-                        "img": "/public/digitize/Merchandising.jpg"
-                    },
-                    {
-                        "title": "Traciking (T&A)",
-                        "desc": "Get real time notifification of all updated and status tracking of activities ",
-                        "img": "/public/digitize/Tracking T_A.png"
-                    },
-                    {
-                        "title": "Capacity Planning",
-                        "desc": "Trace product, location, rating based real time capacity of factories and place order based on cost and leadtime",
-                        "img": "/public/digitize/Capacity Allocation.png"
-                    },
-                    {
-                        "title": "BOM",
-                        "desc": "Automatically generate BOM and customise each raw matrials based on stock/made to order cost, moq and leadtime",
-                        "img": "/public/digitize/BOM - Bill of materials.png"
-                    },
-                    {
-                        "title": "Costing-MOQ-Leadtime-Budget",
-                        "desc": "Calculate and Estimate Consumption, Cost, MOQ, Leadtime based on products and order quantity",
-                        "img": "/public/digitize/Costing.jpg"
-                    },
-                    {
-                        "title": "Capacity Allocation-Booking-Ordering",
-                        "desc": "Trace product, location, rating based real time capacity of factories and place order based on cost and leadtime",
-                        "img": "/public/digitize/Capacity Allocation.png"
-                    },
-                    {
-                        "title": "Quick Costing",
-                        "desc": "Calculate and Estimate Consumption, Cost, MOQ, Leadtime based on products and order quantity",
-                        "img": "/public/digitize/Costing.jpg"
-                    },
-                    {
-                        "title": "Washcare",
-                        "desc": "Design your brand washcare layout",
-                        "img": "/public/digitize/Washcare.jpg"
-                    },
-                    {
-                        "title": "Barcode/QR",
-                        "desc": "Design your brands own barcode/QR code layout",
-                        "img": "/public/digitize/QR.jpg"
-                    },
-                    {
-                        "title": "Trim Card",
-                        "desc": "Generate Trim card automatically based on bill of materials of your product",
-                        "img": "/public/digitize/Trim Card.png"
-                    },
-                    {
-                        "title": "Packing List",
-                        "desc": "Generate Packing list automatically based on the ready to ship products quabtity",
-                        "img": "/public/digitize/Packing List.png"
-                    }
-                    ]
-                },
-                {
-                    title: "Sourcing",
-                    id: "sourcing_1",
-                    link: "/sourcing.html",
-                    img: "/public/home/source.jpg",
-                    tagline: "Optimise! Efficient! Profitable! Sustainable!",
-                    h3: "Source custom-made apparel, fabric, yarn and more",
-                    h4: "Source from our trusted manufacturers and suppliers in Bangladesh, India, Sri Lanka, Thailand, Indonesia, Vietnam & more regions.",
-                    h5: "We help Customers, Buyers and Brands to have their product sourcing effectively as it is very subjective and dynamic; differ for each and every order based on specific requirements and cannot have pre-determined standard operating procedure. In the same way, the lead time, MOQ and Cost for each process will also vary depending upon the raw material even though the vendor remains same.",
-                    h6: "We help Customers, Buyers and Brands with new product development by ensuring right quality of raw materials, machinery and infrastructure to achieve best quality and industry feasible products",
-                    p1: "",
-                    p2: "",
-                    cards: [
-                        {
-                            "title": "Designing",
-                            "desc": "We don't develop product! We design experience that engage, entertain and inspire!",
-                            "img": "public/source/Fashion Designing.jpg"
+                        title: "Consult",
+                        id: "consult_1",
+                        link: "/consulting.html",
+                        img: "/public/home/we-consult.jpg",
+                        tagline: "Optimise! Efficient! Profitable! Sustainable!",
+                        h3: "Every business needs a trusted consultant",
+                        h4: "We make your business bigger, faster, smarter, global and cost-effective, so that you can grow to the next level.",
+                        h5: "Our promise to you is simple, we will help you capture relevant business opportunities and we will ensure that you do so profitably sustainable and within a reasonable timeframe. We exist because of you and at JGI, our client’s interest stands above everything. We stand committed, by your side, as your trusted consultant. ",
+                        h6: "We are into fashion, design and management with experts having years of deep experience in working with organizations across apparel manufacturing, consulting, product development and sourcing. ",
+                        p1: "",
+                        p2: "",
+                        cards: [{
+                            title: "Sourcing",
+                            desc: "Frustrated with manufacturers? Just Get It offers you its own world class manufacturing setup best in industry! You can take a break or concentrate only on branding and marketing while we manage everything from design to delivery!",
+                            img: "/public/consult/sourcing.jpg"
                         },
                         {
-                            "title": "Product Development",
-                            "desc": "We don't develop product! We design experience that engage, entertain and inspire!",
-                            "img": "public/source/Product Development.jpg"
+                            title: "Designing",
+                            desc: "We don't develop product! We design experience that engage, entertain and inspire!",
+                            img: "/public/consult/designing.jpg"
                         },
                         {
-                            "title": "Manufacturing",
-                            "desc": "Produce best-selling clothes for your latest collection at lightning fast speed.",
-                            "img": "public/source/Manufacturing.jpg"
+                            title: "Product Development",
+                            desc: "We don't develop product! We design experience that engage, entertain and inspire!",
+                            img: "/public/consult/product_development.png"
                         },
                         {
-                            "title": "Quality",
-                            "desc": "We ensure Quality, Compliance and ethics at each stage of supply chain!",
-                            "img": "public/source/Quality.jpg"
+                            title: "Manufacturing",
+                            desc: "Micro Factory - World class Manufacturing!",
+                            img: "/public/consult/manufacturing.jpg"
                         },
                         {
-                            "title": "Sustainability",
-                            "desc": "We apply lean to reduce wastage across supply chain and promote recycled and sustainale products!",
-                            "img": "public/source/Sustainibility.png"
+                            title: "Automation",
+                            desc: "All informations at your finger tip! Networking, Transparency, Traceability & Visibility!",
+                            img: "/public/consult/automation.png"
+                        },
+                        {
+                            title: "Branding",
+                            desc: "We help brands connect with the world through digital experiences that engage, entertain, and inspire.",
+                            img: "/public/consult/branding.png"
+                        },
+                        {
+                            title: "Marketplace",
+                            desc: "Introducing hundreds of new styles across multiple categories",
+                            img: "/public/consult/marketplace.jpg"
+                        },
+                        {
+                            title: "Auto Pro",
+                            desc: "Automated tools to smoothen the processs of fashion supply chain across all categories of fashion products",
+                            img: "/public/consult/auto-pro.png"
+                        },
+                        ]
+                    },
+                    {
+                        title: "Digitize",
+                        id: "digitize_2",
+                        link: "/consulting.html",
+                        img: "/public/home/digitise.png",
+                        tagline: "Simplified! Digitised! Faster! Smarter!",
+                        h3: "Solutions to Supply Chain stakeholders",
+                        h4: "Optimise all KPIs - Consumption, Cost, MOQ, Lead Time, Quality, Efficiency, Suply Chain, ROI, Turnover",
+                        h5: "As a developer/owner you are always chasing your suppliers and your consultant to give you an update on the projects especially for delays and critical issues. AutoPRO with its online Dashboards directly connected to the schedule, the operations and the approval documents gives you instant access to this data.",
+                        h6: "Various Supply Chain, Product Development, Manufacturing, PLM and ERP software products to solve the industry issues have been developed and research keep going on to improvise these further",
+                        p1: "",
+                        p2: "",
+                        cards: [{
+                            title: "Product Development",
+                            desc: "Automated tools to smoothen the processs of fashion supply chain across all categories of fashion products",
+                            img: "/public/digitize/product_development.png"
+                        },
+                        {
+                            title: "Branding",
+                            desc: "SEO & digital media Auto posting tools to do branding & marketing",
+                            img: "/public/digitize/Branding-Digital Marketing.jpg"
+                        },
+                        {
+                            title: "2D Design",
+                            desc: "Auto design 2D graphics",
+                            img: "/public/digitize/2D design.jpg"
+                        },
+                        {
+                            title: "3D Design",
+                            desc: "Auto Design 3D Graphics/Animation/Videos",
+                            img: "/public/digitize/3D Design.webp"
+                        },
+                        {
+                            title: "Personalise",
+                            desc: "Personalise your products",
+                            img: "/public/digitize/Personalise.png"
+                        },
+                        {
+                            title: "Customise",
+                            desc: "Customise your products",
+                            img: "/public/digitize/Customise.jpg"
+                        },
+                        {
+                            title: "Visualise-3D",
+                            desc: "Visualise your products using virtual trial room and selfie",
+                            img: "/public/digitize/Visualise VR 3D.png"
+                        },
+                        {
+                            title: "Enquiry",
+                            desc: "Enquiry form to get required details automatically",
+                            img: "/public/digitize/Enquiry.jpg"
+                        },
+                        {
+                            title: "Designing",
+                            desc: "Automated tools to smoothen the processs of fashion supply chain across all categories of fashion products",
+                            img: "/public/digitize/Product Development.jpg"
+                        },
+                        {
+                            title: "Sampling",
+                            desc: "Sampling form to get required details automatically",
+                            img: "/public/digitize/SMED Changeover.png"
+                        },
+                        {
+                            title: "Ordering",
+                            desc: "Ordering form to get required details automatically",
+                            img: "/public/digitize/Warehouse.jpg"
+                        },
+                        {
+                            title: " Measurement chart",
+                            desc: "Create your own measurement chart based on ethnicity and body type",
+                            img: "/public/digitize/Measurement Chart.jpg"
+                        },
+                        {
+                            title: "Size&Fit",
+                            desc: "Compare and choose best size and fit as per your own body type/measurements/old style details",
+                            img: "/public/digitize/size and fit.jpg"
+                        },
+                        {
+                            "title": "Techpack",
+                            "desc": "Design your styles techpack automatically",
+                            "img": "/public/digitize/Techpack.jpg"
+                        },
+                        {
+                            "title": "3D Simulation (Product and  collection, fashion show)",
+                            "desc": "visualise your products digitally in 3D simulation view by selecting model, shape, size, background, etc.",
+                            "img": "/public/digitize/3d simulation.jpg"
+                        },
+                        {
+                            "title": "Consumption",
+                            "desc": "Calculate and estimate consumption based on the order quantity and size ratio",
+                            "img": "/public/digitize/Consumption.jpg"
+                        },
+                        {
+                            "title": "Lead Time",
+                            "desc": "Calculate and estimate Leadtime based on product and order quanity",
+                            "img": "/public/digitize/Leadtime.png"
+                        },
+                        {
+                            "title": "Merchandising",
+                            "desc": "Automising merchandising and supply chain",
+                            "img": "/public/digitize/Merchandising.jpg"
+                        },
+                        {
+                            "title": "Traciking (T&A)",
+                            "desc": "Get real time notifification of all updated and status tracking of activities ",
+                            "img": "/public/digitize/Tracking T_A.png"
+                        },
+                        {
+                            "title": "Capacity Planning",
+                            "desc": "Trace product, location, rating based real time capacity of factories and place order based on cost and leadtime",
+                            "img": "/public/digitize/Capacity Allocation.png"
+                        },
+                        {
+                            "title": "BOM",
+                            "desc": "Automatically generate BOM and customise each raw matrials based on stock/made to order cost, moq and leadtime",
+                            "img": "/public/digitize/BOM - Bill of materials.png"
+                        },
+                        {
+                            "title": "Costing-MOQ-Leadtime-Budget",
+                            "desc": "Calculate and Estimate Consumption, Cost, MOQ, Leadtime based on products and order quantity",
+                            "img": "/public/digitize/Costing.jpg"
+                        },
+                        {
+                            "title": "Capacity Allocation-Booking-Ordering",
+                            "desc": "Trace product, location, rating based real time capacity of factories and place order based on cost and leadtime",
+                            "img": "/public/digitize/Capacity Allocation.png"
+                        },
+                        {
+                            "title": "Quick Costing",
+                            "desc": "Calculate and Estimate Consumption, Cost, MOQ, Leadtime based on products and order quantity",
+                            "img": "/public/digitize/Costing.jpg"
+                        },
+                        {
+                            "title": "Washcare",
+                            "desc": "Design your brand washcare layout",
+                            "img": "/public/digitize/Washcare.jpg"
+                        },
+                        {
+                            "title": "Barcode/QR",
+                            "desc": "Design your brands own barcode/QR code layout",
+                            "img": "/public/digitize/QR.jpg"
+                        },
+                        {
+                            "title": "Trim Card",
+                            "desc": "Generate Trim card automatically based on bill of materials of your product",
+                            "img": "/public/digitize/Trim Card.png"
+                        },
+                        {
+                            "title": "Packing List",
+                            "desc": "Generate Packing list automatically based on the ready to ship products quabtity",
+                            "img": "/public/digitize/Packing List.png"
                         }
-                    ]
-                },
+                        ]
+                    },
+                    {
+                        title: "Sourcing",
+                        id: "sourcing_1",
+                        link: "/sourcing.html",
+                        img: "/public/home/source.jpg",
+                        tagline: "Optimise! Efficient! Profitable! Sustainable!",
+                        h3: "Source custom-made apparel, fabric, yarn and more",
+                        h4: "Source from our trusted manufacturers and suppliers in Bangladesh, India, Sri Lanka, Thailand, Indonesia, Vietnam & more regions.",
+                        h5: "We help Customers, Buyers and Brands to have their product sourcing effectively as it is very subjective and dynamic; differ for each and every order based on specific requirements and cannot have pre-determined standard operating procedure. In the same way, the lead time, MOQ and Cost for each process will also vary depending upon the raw material even though the vendor remains same.",
+                        h6: "We help Customers, Buyers and Brands with new product development by ensuring right quality of raw materials, machinery and infrastructure to achieve best quality and industry feasible products",
+                        p1: "",
+                        p2: "",
+                        cards: [
+                            {
+                                "title": "Designing",
+                                "desc": "We don't develop product! We design experience that engage, entertain and inspire!",
+                                "img": "public/source/Fashion Designing.jpg"
+                            },
+                            {
+                                "title": "Product Development",
+                                "desc": "We don't develop product! We design experience that engage, entertain and inspire!",
+                                "img": "public/source/Product Development.jpg"
+                            },
+                            {
+                                "title": "Manufacturing",
+                                "desc": "Produce best-selling clothes for your latest collection at lightning fast speed.",
+                                "img": "public/source/Manufacturing.jpg"
+                            },
+                            {
+                                "title": "Quality",
+                                "desc": "We ensure Quality, Compliance and ethics at each stage of supply chain!",
+                                "img": "public/source/Quality.jpg"
+                            },
+                            {
+                                "title": "Sustainability",
+                                "desc": "We apply lean to reduce wastage across supply chain and promote recycled and sustainale products!",
+                                "img": "public/source/Sustainibility.png"
+                            }
+                        ]
+                    },
 
-            ]
+                ]
 
-            let body_div = document.getElementById("body_cards");
-            console.log("body div ", body_div);
+                let body_div = document.getElementById("body_cards");
+                console.log("body div ", body_div);
 
-            let generateBodyWithLeftImg = (id, title, link, img = "", tagline, h3, h4, h5 = "", h6 = "", p1 = "", p2 = "") => {
-                let bodyHTML = `
+                let generateBodyWithLeftImg = (id, title, link, img = "", tagline, h3, h4, h5 = "", h6 = "", p1 = "", p2 = "") => {
+                    let bodyHTML = `
             <section id="connect-content">
         <div>
             <div class="container clearfix">
@@ -9710,12 +9722,12 @@ height="250" alt="consultancy">
         
     </section>
     `
-                return bodyHTML
-            };
+                    return bodyHTML
+                };
 
 
-            let generateBodyWithRightImg = (id, title, link, img = "", tagline, h3, h4, h5 = "", h6 = "", p1 = "", p2 = "") => {
-                let bodyHTML = `
+                let generateBodyWithRightImg = (id, title, link, img = "", tagline, h3, h4, h5 = "", h6 = "", p1 = "", p2 = "") => {
+                    let bodyHTML = `
                 <section id="auto-content">
         <div>
             <div class="container clearfix">
@@ -9770,13 +9782,13 @@ height="250" alt="consultancy">
         
     </section>
     `
-                return bodyHTML
-            };
+                    return bodyHTML
+                };
 
 
 
-            let generateCard = (title, desc, img) => {
-                return `
+                let generateCard = (title, desc, img) => {
+                    return `
 
     <div class="new-category center padded">
         <div class="card-with-img" style="height: 30rem; width: 100%">
@@ -9792,70 +9804,71 @@ height="250" alt="consultancy">
     </div>
 
     `
-            }
-
-            body_cards_object.forEach((body, i) => {
-                // console.log(consult_cards[card]);
-                const title = body.title;
-                const desc = body.tagline;
-                const img = body.h3;
-                const cards = body.cards;
-                console.log(title, cards);
-                let html_body;
-                if (i % 2 != 0) {
-
-                    html_body = generateBodyWithLeftImg(body.id, body.title, body.link, body.img, body.tagline, body.h3, body.h4, body.h5, body.h6, body.p1, body.p2);
                 }
-                else {
-                    html_body = generateBodyWithRightImg(body.id, body.title, body.link, body.img, body.tagline, body.h3, body.h4, body.h5, body.h6, body.p1, body.p2);
-                }
-                body_div.innerHTML += html_body;
-                let body_cards_id = document.getElementById(body.id);
-                console.log(body_cards_id)
-                body.cards.forEach((card) => {
-                    // console.log(card.title, card.desc, card.img);
-                    let html_card = generateCard(card.title, card.desc, card.img);
-                    console.log(html_card);
-                    body_cards_id.innerHTML += html_card;
+
+                body_cards_object.forEach((body, i) => {
+                    // console.log(consult_cards[card]);
+                    const title = body.title;
+                    const desc = body.tagline;
+                    const img = body.h3;
+                    const cards = body.cards;
+                    console.log(title, cards);
+                    let html_body;
+                    if (i % 2 != 0) {
+
+                        html_body = generateBodyWithLeftImg(body.id, body.title, body.link, body.img, body.tagline, body.h3, body.h4, body.h5, body.h6, body.p1, body.p2);
+                    }
+                    else {
+                        html_body = generateBodyWithRightImg(body.id, body.title, body.link, body.img, body.tagline, body.h3, body.h4, body.h5, body.h6, body.p1, body.p2);
+                    }
+                    body_div.innerHTML += html_body;
+                    let body_cards_id = document.getElementById(body.id);
+                    console.log(body_cards_id)
+                    body.cards.forEach((card) => {
+                        // console.log(card.title, card.desc, card.img);
+                        let html_card = generateCard(card.title, card.desc, card.img);
+                        console.log(html_card);
+                        body_cards_id.innerHTML += html_card;
+                    })
+
+                    console.log(document.getElementById(body.id));
+
                 })
 
-                console.log(document.getElementById(body.id));
+                $(document).ready(function () {
+                    // let total_itens = Math.ceil(document.getElementsByClassName('item-owl').length / 5);
 
-            })
 
-            $(document).ready(function () {
+                    $(".gencrousel").owlCarousel({
 
-                $(".gencrousel").owlCarousel({
-                    autoplay: true,
-                    loop: true,
-                    margin: 10,
-                    
-                  
-                    responsiveClass: true,
-                    responsive: {
-                        0: {
-                            items: 1,
-                            loop: true,
-                            dots: false
+                        autoplay: true,
+                        loop: true,
+                        margin: 10,
+                        responsiveClass: true,
+                        dotsEach: this.length / 5,
+                        responsive: {
+                            0: {
+                                items: 1,
+                                loop: true,
+                            },
+                            600: {
+                                items: 4,
+                                loop: true
+                            },
+                        }
+                    });
 
-                        },
-                        600: {
-                            items: 4,
 
-                            loop: true
 
-                        },
-
-                    }
                 });
-
-            });
-        </script>
+            </script>
 
 
 
-        <!-- style="position: absolute" width="100%" alt="apparel" -->
-        <!-- <section id="source-content">
+
+
+            <!-- style="position: absolute" width="100%" alt="apparel" -->
+            <!-- <section id="source-content">
             <div>
                 <div class="container clearfix">
                     <h1 class="center-head">Source</h1>
@@ -9889,14 +9902,14 @@ height="250" alt="consultancy">
 
                     <a href="orderform.html" class="button button-border button-rounded button-large noleftmargin topmargin-sm">PLACE YOUR ORDER HERE</a>-->
 
-        <!--	<input type="text" id="input_date1" /> -->
+            <!--	<input type="text" id="input_date1" /> -->
+
+        </div>
+        <!--    <div class="line"></div>    -->
 
     </div>
-    <!--    <div class="line"></div>    -->
-
     </div>
-    </div>
-    </section> 
+    </section>
 
     <!-- <section class="position:absolute;">
         <div class="new-category center padded">
@@ -10165,7 +10178,60 @@ height="250" alt="consultancy">
 
             </div>
         </div>
-        <!--  -->
+        <script>
+
+            let catalog = document.getElementById("owl-demo17");
+            catalog_cards = [
+                {
+                    "title": "Trims",
+                    "desc": "Browse various options and add to wishlist or cart to order in bulk",
+                    "img": "public/catalogue/Apparels-Uniforms.jpg"
+                },
+                {
+                    "title": "Fabric",
+                    "desc": "Browse various options and add to wishlist or cart to order in bulk",
+                    "img": "public/catalogue/Fabric.jpg"
+                },
+                {
+                    "title": "Decor",
+                    "desc": "Browse various options and add to wishlist or cart to order in bulk",
+                    "img": "public/catalogue/Apparels-Designer.png"
+                },
+                {
+                    "title": "Apparels-RTW/Designer/Uniform",
+                    "desc": "Browse various options and add to wishlist or cart to order in bulk",
+                    "img": "public/catalogue/Apparels-RTW.jpg"
+                },
+                {
+                    "title": "Handicraft",
+                    "desc": "Browse various options and add to wishlist or cart to order in bulk",
+                    "img": "public/catalogue/Handicraft.jpg"
+                },
+                {
+                    "title": "Accessories",
+                    "desc": "Browse various options and add to wishlist or cart to order in bulk",
+                    "img": "public/catalogue/Accessories.jpg"
+                },
+                {
+                    "title": "Hardgoods",
+                    "desc": "Browse various options and add to wishlist or cart to order in bulk",
+                    "img": "public/catalogue/Hardgoods.jpg"
+                }
+            ]
+            catalog_cards.map((card) => {
+                // console.log(consult_cards[card]);
+                const title = card.title;
+                const desc = card.desc;
+                const img = card.img;
+
+                let html_card = getCard(title, desc, img);
+
+                catalog.innerHTML += html_card;
+
+
+
+            })
+        </script>
 
 
         <script>
@@ -10269,7 +10335,60 @@ height="250" alt="consultancy">
 
             </div>
         </div>
-        <!--  -->
+        <script>
+            let market = document.getElementById("owl-demo22");
+            market_cards = [
+                {
+                    "title": "Personalise",
+                    "desc": "Personalise your any fashion products bought from our marketplace with the help of our dedicated well equipped personalisation team of experts",
+                    "img": "public/market/Personalise.png"
+                },
+                {
+                    "title": "Customise",
+                    "desc": "Customise your any fashion products as per your design sense! Design your own products with the help of our dedicated well equipped customisation team of experts",
+                    "img": "public/market/Customise.jpg"
+                },
+                {
+                    "title": "Visualise",
+                    "desc": "Visualise any of your designed or selected fashion products on your own 3D look by uploading few selfies and few body measurements!",
+                    "img": "public/market/Visualise.webp"
+                },
+                {
+                    "title": "B2B",
+                    "desc": "Buy in bulk at wholesale price from verified and high rated suppliers with quality and traceability of materials!",
+                    "img": "public/market/B2B.png"
+                },
+                {
+                    "title": "B2C",
+                    "desc": "Buy from verified and high rated brands with quality and traceability of materials!",
+                    "img": "public/market/B2C.jpg"
+                },
+                {
+                    "title": "D2C",
+                    "desc": "Buy from verified and high rated brands with quality and traceability of materials!",
+                    "img": "public/market/D2C.jpg"
+                },
+                {
+                    "title": "R4U",
+                    "desc": "Buy in bulk at wholesale price from verified and high rated suppliers with quality and traceability of materials!",
+                    "img": "public/market/R4U.png"
+                }
+            ]
+            market_cards.map((card) => {
+                // console.log(consult_cards[card]);
+                const title = card.title;
+                const desc = card.desc;
+                const img = card.img;
+
+                let html_card = getCard(title, desc, img);
+
+                market.innerHTML += html_card;
+
+
+
+            })
+
+        </script>
 
 
         <script>
@@ -10362,7 +10481,7 @@ height="250" alt="consultancy">
         </div>
         </div>
     </section>
-    <!-- <section class="position:absolute;">
+    <section class="position:absolute;">
         <div class="new-category center padded">
             <h3>Trendy! Fast Fashion! Affordable!</h3>
             <div id="owl-demo21" class="owl-carousel owl-theme">
@@ -10370,7 +10489,59 @@ height="250" alt="consultancy">
             </div>
         </div>
 
+        <script>
+            let brands = document.getElementById("owl-demo21");
+            brands_cards = [
+                {
+                    "title": "Inolio",
+                    "desc": "Fast Fashion",
+                    "img": "public/brands/Inolio.jpeg"
+                },
+                {
+                    "title": "Sustains",
+                    "desc": "Organic, Bamboo, Banana,Orange, Rose eco-fabrics made apparels & accessories",
+                    "img": "public/brands/Sustains.jpg"
+                },
+                {
+                    "title": "Stylothon",
+                    "desc": "Marathon of fashion styles",
+                    "img": "public/brands/Stylothon.png"
+                },
+                {
+                    "title": "Miha",
+                    "desc": "Western Bridal,",
+                    "img": "public/brands/Miha.jpg"
+                },
+                {
+                    "title": "Nilambri",
+                    "desc": "Ethnic Wear & Handicraft",
+                    "img": "public/brands/Nilambri.jpg"
+                },
+                {
+                    "title": "Rainush",
+                    "desc": "Indo Western",
+                    "img": "public/brands/Rainush.jpg"
+                },
+                {
+                    "title": "Justio",
+                    "desc": "Corporate Uniforms",
+                    "img": "public/brands/Justio.jpg"
+                }
+            ]
+            brands_cards.map((card) => {
+                // console.log(consult_cards[card]);
+                const title = card.title;
+                const desc = card.desc;
+                const img = card.img;
 
+                let html_card = getCard(title, desc, img);
+
+                brands.innerHTML += html_card;
+
+
+
+            })
+        </script>
 
         <script>
             $(document).ready(function () {
@@ -10416,7 +10587,7 @@ height="250" alt="consultancy">
         </script>
 
 
-    </section> -->
+    </section>
     <section id="source-content">
         <div>
             <div class="container clearfix">
