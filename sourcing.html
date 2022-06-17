@@ -12935,13 +12935,47 @@ and (orientation: portrait)
                 </style>
 
 
+
+<style>
+    .text-shadow-black .item {
+        /* box-shadow: 10px 10px rgba(0, 0, 0, 0.7); */
+        color: #fff;
+    }
+
+    /* .text-view img{
+    opacity: 0.7;
+} */
+    .text-shadow-black h2,
+    .text-shadow-black h3 {
+        text-shadow: black 0px 0px 10px;
+    }
+
+    .owl-dots {
+
+        max-width: 130px;
+        width: max-content;
+        overflow: auto;
+        display: flex;
+        float: calc();
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .owl-dots::-webkit-scrollbar {
+        display: none;
+        /* Safari and Chrome */
+    }
+</style>
+
+
                 <!-- ======= hero Section ======= -->
                 <section id="hero2">
                     <div class="container-fluid">
                         <div id="hero-demo" class="hero-slider owl-carousel owl-theme">
 
                             <div class="item"> <img src="./public/home/we-source.jpg" alt="banner">
-                                <div class="carousel-caption  d-md-block newflex">
+                                <div class="carousel-caption  d-md-block newflex text-shadow-black">
                                     <span>
                                         <h2>Sourcing</h2>
                                     </span>
@@ -12961,7 +12995,7 @@ and (orientation: portrait)
                             </div>
 
                             <div class="item"> <img src="public/home/product-development.jpg" alt="banner">
-                                <div class="carousel-caption  d-md-block newflex">
+                                <div class="carousel-caption  d-md-block newflex text-shadow-black">
                                     <span>
                                         <h2>Designing</h2>
                                     </span>
@@ -12979,12 +13013,13 @@ and (orientation: portrait)
                             </div>
 
                             <div class="item"> <img src="public/home/product-development.jpg" alt="banner">
-                                <div class="carousel-caption  d-md-block newflex">
+                                <div class="carousel-caption  d-md-block newflex text-shadow-black">
                                     <span>
                                         <h2>Product Development
                                         </h2>
                                     </span>
-                                    <h3 class="responsive-font">We don't develop product! We design experience that engage, entertain and inspire!
+                                    <h3 class="responsive-font">We don't develop product! We design experience that
+                                        engage, entertain and inspire!
                                     </h3>
                                     <div class="d-flex">
                                         <a href="/sourcing.html" class="btn-get-started scrollto responsive-font">
@@ -12994,17 +13029,18 @@ and (orientation: portrait)
                             </div>
 
                             <div class="item"> <img src="public/home/manufacture.jpg" alt="banner">
-                                <div class="carousel-caption  d-md-block newflex">
+                                <div class="carousel-caption  d-md-block newflex text-shadow-black">
                                     <span>
                                         <h2>Manufacturing
                                         </h2>
                                     </span>
-                                    <h3 class="responsive-font">Produce best-selling clothes for your latest collection at lightning
+                                    <h3 class="responsive-font">Produce best-selling clothes for your latest collection
+                                        at lightning
                                         fast speed.
-            
-            
-            
-            
+
+
+
+
                                     </h3>
                                     <div class="d-flex">
                                         <a href="/manufacturing.html" class="btn-get-started scrollto responsive-font">
@@ -13014,12 +13050,13 @@ and (orientation: portrait)
                             </div>
 
                             <div class="item"> <img src="public/home/quality.jpg" alt="banner">
-                                <div class="carousel-caption  d-md-block newflex">
+                                <div class="carousel-caption  d-md-block newflex text-shadow-black">
                                     <span>
                                         <h2>Quality
                                         </h2>
                                     </span>
-                                    <h3 class="responsive-font">We ensure Quality, Compliance and ethics at each stage of supply
+                                    <h3 class="responsive-font">We ensure Quality, Compliance and ethics at each stage
+                                        of supply
                                         chain!
                                     </h3>
                                     <div class="d-flex">
@@ -13030,17 +13067,19 @@ and (orientation: portrait)
                             </div>
 
                             <div class="item"> <img src="public/home/sustainibility.png" alt="banner">
-                                <div class="carousel-caption  d-md-block newflex">
+                                <div class="carousel-caption  d-md-block newflex text-shadow-black">
                                     <span>
                                         <h2>Sustainability
                                         </h2>
                                     </span>
-                                    <h3 class="responsive-font">We apply lean to reduce wastage across supply chain and promote
+                                    <h3 class="responsive-font">We apply lean to reduce wastage across supply chain and
+                                        promote
                                         recycled and sustainable products!
-            
+
                                     </h3>
                                     <div class="d-flex">
-                                        <a href="	/sustainability.html" class="btn-get-started scrollto responsive-font">
+                                        <a href="	/sustainability.html"
+                                            class="btn-get-started scrollto responsive-font">
                                             Sustain Now</a>
                                     </div>
                                 </div>
@@ -13237,80 +13276,127 @@ and (orientation: portrait)
                 <div class="card-wrapper">
                     <h2 class="center-text">Apparel sourcing with complete transparency</h2>
                     <section class="position:absolute;">
-                        <div class="new-category center padded">
+                        <!-- <div class="new-category center padded"> -->
                             <!-- <h2 class="center-head">Manufacturing </h2> -->
                             <!-- <h3>Optimise! Efficient! Profitable! Sustainable!</h3> -->
                             <div id="owl-demo14" class="owl-carousel owl-theme">
 
-                                <div class="new-category center padded">
 
-                                    <div class="card-with-img">
-
-
-                                        <a href="None">
-                                            <div><img src="/media/local/product/8239401507059.jfif" alt="card">
-                                                <div class="card-content">
-                                        </a>
-                                        <h4>ffdfy</h4>
-                                        <p>ghcgcg</p>
-
-                                    </div>
-                                </div>
                             </div>
-                        </div>
+                        <!-- </div> -->
 
 
-                </div>
-                </div>
-                <!--  -->
+                        <script>
+                            let source = document.getElementById("owl-demo14");
+                            let generateCard = (title, desc, img) => {
+                                return `
 
+    <div class="new-category center padded">
+        <div class="card-with-img" style="height: 30rem; width: 100%">
+            <a href="#">
+                <img class="card-img-top" src="${img}" alt="card">
+            </a>
+            <div class="p-3">
+            <h4>${title}</h4>
+            <p>${desc}</p>
 
-                <script>
-                    $(document).ready(function () {
+        </div>
+        </div>
+    </div>
 
-                        $("#owl-demo14").owlCarousel({
-
-
-                            // stagePadding:30,
-                            // smartSpeed:450,
-                            autoplay: true,
-                            // 
-                            loop: true,
-                            margin: 10,
-                            responsiveClass: true,
-                            responsive: {
-                                0: {
-                                    items: 1,
-
-
+    `}
+                            let source_cards = [
+                                {
+                                    "title": "Designing",
+                                    "desc": "We don't develop product! We design experience that engage, entertain and inspire!",
+                                    "img": "public/source/Fashion Designing.jpg"
                                 },
-                                600: {
-                                    items: 4,
-
-                                    loop: true
-
+                                {
+                                    "title": "Product Development",
+                                    "desc": "We don't develop product! We design experience that engage, entertain and inspire!",
+                                    "img": "public/source/Product Development.jpg"
                                 },
+                                {
+                                    "title": "Manufacturing",
+                                    "desc": "Produce best-selling clothes for your latest collection at lightning fast speed.",
+                                    "img": "public/source/Manufacturing.jpg"
+                                },
+                                {
+                                    "title": "Quality",
+                                    "desc": "We ensure Quality, Compliance and ethics at each stage of supply chain!",
+                                    "img": "public/source/Quality.jpg"
+                                },
+                                {
+                                    "title": "Sustainability",
+                                    "desc": "We apply lean to reduce wastage across supply chain and promote recycled and sustainale products!",
+                                    "img": "public/source/Sustainibility.png"
+                                }
+                            ]
+                            source_cards.map((card) => {
+                                // console.log(consult_cards[card]);
+                                const title = card.title;
+                                const desc = card.desc;
+                                const img = card.img;
 
-                            }
+                                let html_card = generateCard(title, desc, img);
+
+                                source.innerHTML += html_card;
 
 
 
-                            // "singleItem:true" is a shortcut for:
-                            // items : 1, 
-                            // itemsDesktop : false,
-                            // itemsDesktopSmall : false,
-                            // itemsTablet: false,
-                            // itemsMobile : false
-
-                        });
-
-                    });
-
-                </script>
+                            })
 
 
-            </section>
-            <!-- <div id="owl-demo111" class="owl-carousel owl-theme">
+
+                        </script>
+
+
+                        <script>
+                            $(document).ready(function () {
+
+                                $("#owl-demo14").owlCarousel({
+
+
+                                    // stagePadding:30,
+                                    // smartSpeed:450,
+                                    autoplay: true,
+                                    // 
+                                    loop: true,
+                                    margin: 10,
+                                    responsiveClass: true,
+                                    responsive: {
+                                        0: {
+                                            items: 1,
+
+
+                                        },
+                                        600: {
+                                            items: 4,
+
+                                            loop: true
+
+                                        },
+
+                                    }
+
+
+
+                                    // "singleItem:true" is a shortcut for:
+                                    // items : 1, 
+                                    // itemsDesktop : false,
+                                    // itemsDesktopSmall : false,
+                                    // itemsTablet: false,
+                                    // itemsMobile : false
+
+                                });
+
+                            });
+
+                        </script>
+
+
+                    </section>
+                    <!-- <div id="owl-demo111" class="owl-carousel owl-theme">
       
             <div class="card">
                 <div class="center">
@@ -13525,32 +13611,70 @@ and (orientation: portrait)
 
 
                 <section class="position:absolute;">
-                    <div class="new-category center padded">
+                    <!-- <div class="new-category center padded"> -->
                         <!-- <h2 class="center-head">Manufacturing </h2> -->
                         <!-- <h3>Optimise! Efficient! Profitable! Sustainable!</h3> -->
                         <div id="owl-demo15" class="owl-carousel owl-theme">
 
-                            <div class="new-category center padded">
-
-                                <div class="card-with-img">
-
-
-                                    <a href="None">
-                                        <div><img src="/media/local/product/10778770100816.jfif" alt="card">
-                                            <div class="card-content">
-                                    </a>
-                                    <h4>Coke</h4>
-                                    <p>Coke</p>
-
-                                </div>
-                            </div>
+                            
                         </div>
-                    </div>
+                    <!-- </div> -->
 
 
-            </div>
-            </div>
-            <!--  -->
+          
+           <script>
+                        let brands = document.getElementById("owl-demo15");
+            brands_cards = [
+                {
+                    "title": "Inolio",
+                    "desc": "Fast Fashion",
+                    "img": "public/brands/Inolio.jpeg"
+                },
+                {
+                    "title": "Sustains",
+                    "desc": "Organic, Bamboo, Banana,Orange, Rose eco-fabrics made apparels & accessories",
+                    "img": "public/brands/Sustains.jpg"
+                },
+                {
+                    "title": "Stylothon",
+                    "desc": "Marathon of fashion styles",
+                    "img": "public/brands/Stylothon.png"
+                },
+                {
+                    "title": "Miha",
+                    "desc": "Western Bridal,",
+                    "img": "public/brands/Miha.jpg"
+                },
+                {
+                    "title": "Nilambri",
+                    "desc": "Ethnic Wear & Handicraft",
+                    "img": "public/brands/Nilambri.jpg"
+                },
+                {
+                    "title": "Rainush",
+                    "desc": "Indo Western",
+                    "img": "public/brands/Rainush.jpg"
+                },
+                {
+                    "title": "Justio",
+                    "desc": "Corporate Uniforms",
+                    "img": "public/brands/Justio.jpg"
+                }
+            ]
+            brands_cards.map((card) => {
+                // console.log(consult_cards[card]);
+                const title = card.title;
+                const desc = card.desc;
+                const img = card.img;
+
+                let html_card = generateCard(title, desc, img);
+
+                brands.innerHTML += html_card;
+
+
+
+            })
+           </script>
 
 
             <script>
