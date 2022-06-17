@@ -10080,9 +10080,61 @@ height="250" alt="consultancy">
 
             </div>
         </div>
-        <!--  -->
+      
+        <script>
+
+            let manufacturing = document.getElementById("owl-demo18");
+            let manufacturing_cards = [
+    {
+        "title": "Trims",
+        "desc": "Convenient way to manufacture and track trims",
+        "img": "public/manufacturing/"
+    },
+    {
+        "title": "Fabric",
+        "desc": "Convenient way to manufacture and track trims",
+        "img": "public/manufacturing/Fabric.jpg"
+    },
+    {
+        "title": "Decor",
+        "desc": "Convenient way to manufacture and track trims",
+        "img": "public/manufacturing/Decor.jpg"
+    },
+    {
+        "title": "Apparels-RTW/Designer/Uniform",
+        "desc": "Convenient way to manufacture and track trims",
+        "img": "public/manufacturing/Apparels-Uniform.jpg"
+    },
+    {
+        "title": "Handicraft",
+        "desc": "Convenient way to manufacture and track trims",
+        "img": "public/manufacturing/Handicraft.jpg"
+    },
+    {
+        "title": "Accessories",
+        "desc": "Convenient way to manufacture and track trims",
+        "img": "public/manufacturing/Accessories.jpg"
+    },
+    {
+        "title": "Hardgoods",
+        "desc": "Convenient way to manufacture and track trims",
+        "img": "public/manufacturing/Hardgoods.jpg"
+    }
+]
+            manufacturing_cards.map((card) => {
+                // console.log(consult_cards[card]);
+                const title = card.title;
+                const desc = card.desc;
+                const img = card.img;
+
+                let html_card = getCard(title, desc, img);
+
+                manufacturing.innerHTML += html_card;
 
 
+
+            })
+        </script>
         <script>
             $(document).ready(function () {
 
